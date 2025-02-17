@@ -1,0 +1,11 @@
+dbs:
+  - path: /data/data.db
+    replicas:
+      - type: abs
+        account-name: ariax
+        bucket: sqlite
+        path: db
+        retention: 12h
+        retention-check-interval: 3m
+        snapshot-interval: 4h
+        sync-interval: 30s
