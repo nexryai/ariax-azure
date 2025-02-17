@@ -1,9 +1,4 @@
-from alpine as litestream
-
-ENV LITESTREAM_VERSION=v0.3.13
-
-ADD https://github.com/benbjohnson/litestream/releases/download/$LITESTREAM_VERSION/litestream-$LITESTREAM_VERSION-linux-amd64.tar.gz /tmp/litestream.tar.gz
-RUN tar -C /usr/local/bin -xzf /tmp/litestream.tar.gz
+FROM litestream/litestream:0.3.13 AS litestream
 
 FROM nexryai/ariax:nightly
 
