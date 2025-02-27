@@ -1,6 +1,6 @@
 FROM litestream/litestream:0.3.13 AS litestream
 
-FROM nexryai/ariax:latest
+FROM ghcr.io/nexryai/aria:latest
 
 COPY --from=litestream /usr/local/bin/litestream /usr/local/bin/litestream
 COPY litestream.yml /etc/litestream.yml
